@@ -16,7 +16,6 @@ body {
 }
 
 .flex-contianer {
-    -webkit-transform-style: preserve-3d;
     display: -webkit-box;
     -webkit-box-align: center;
     -webkit-box-pack: center;
@@ -47,11 +46,22 @@ body {
 }
 
 .home {
-    .middle{
+    .middle {
         display: table-cell;
         vertical-align: middle;
         height: 700px;
         width: 900px;
         text-align: center;
     }
+}
+.prev {
+    transform: translateZ(-600px) rotateY(-120deg) translateZ(600px);
+}
+
+.current {
+    transform: translateZ(-600px) rotateY(0deg) translateZ(600px);
+}
+
+.next {
+    transform: translateZ(-600px) rotateY(120deg) translateZ(600px);
 }

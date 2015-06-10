@@ -70,11 +70,31 @@
             <div class="slide">
                 <h1>HTML语义化标签</h1>
             </div>
+            <div class="slide">
+                <h1>谢谢！</h1>
+            </div>
         </div>
     </div>
 </body>
 <script>
-var slideItem = document.querySelectorAll('.slide');
+(function() {
+    var slideCtrl = {
+        init: function() {
+            var slideItem = document.querySelectorAll('.slide');
+        },
+        currentId: function() {
+
+        }
+    }
+    slideCtrl.init();
+    window.onkeydown = function(event) {
+        if (event.keyCode == 37) {
+
+        } else if (event.keyCode == 39) {
+            
+        }
+    };
+})();
 </script>
 
 </html>
