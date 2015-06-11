@@ -11,7 +11,7 @@
 <body>
     <div class="flex-contianer">
         <div class="slides" id="slides">
-            <div class="slide home">
+            <div class="slide home current">
                 <div class="middle">
                     <h1>HTML5开发经验分享</h1>
                     <p>孙艳慧</p>
@@ -79,19 +79,53 @@
 <script>
 (function() {
     var slideCtrl = {
-        init: function() {
-            var slideItem = document.querySelectorAll('.slide');
-        },
-        currentId: function() {
+        getItem: function(){
+            var current = document.querySelector('.current'),
+                items = document.querySelectorAll('.slide'),
+                itemIdx = '';
+            
+            for (var i=items.length; i>0; i--) {
+                if (items[i] == current) {
+                    itemIdx = i;
+                    break;
+                }
+            }
 
+            return itemIdx;
+        },
+        changeItem: function(left){
+            var items = document.querySelectorAll('.slide'),
+                current, prev, next;
+
+            if (left) {
+                next = itemIdx;
+                current = itemIdx < 1 itemIdx - 1 : '';
+                prev = itemIdx > 2 ? itemIdx - 2 : ''
+            } else {
+                prev = document.querySelector('.current');
+                current = prev.nextSibling;
+                next = current.nextSibling;
+            }
+            
+            next.classList
+                .remove('current')
+                .remove('prev')
+                .add('next');
+            current.classList
+                .remove('next')
+                .remove('prev')
+                .add('current')
+            prev.classList
+                .remove('current')
+                .remove('next')
+                .add('prev')
         }
     }
-    slideCtrl.init();
     window.onkeydown = function(event) {
         if (event.keyCode == 37) {
-
+            slideCtrl.changeItem(1);
         } else if (event.keyCode == 39) {
-            
+            slideCtrl.changeItem(0);
         }
     };
 })();
