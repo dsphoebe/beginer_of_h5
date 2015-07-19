@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>html5</title>
+    <style>
+    body,
+    p,
+    h1,
+    h2 {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    * {
+        font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 90px;
+        -webkit-box-sizing: border-box;
+    }
+    
+    body {
+        background: #ccc;
+    }
+    
+    p,
+    li {
+        font-size: 70px;
+    }
+    
+    .page {
+        background: #2E3C44;
+        border: 1px solid #2E3C44;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+    }
+    
+    .page.current {
+        opacity: 1;
+        z-index: 2;
+    }
+    
+    .page .content {
+        width: 80%;
+        height: 90%;
+        margin: 5% 10%;
+    }
+    
+    progress::-webkit-progress-value {
+        background: orange;
+    }
+    
+    progress[value] {
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+    }
+    /* index page */
+    
+    .index .html5 {
+        display: block;
+        width: 685px;
+        height: 250px;
+        margin: 15% auto 0;
+        position: relative;
+        overflow: hidden;
+        font-size: 190px;
+    }
+    
+    .index .subtitle {
+        text-align: center;
+    }
+    /* why */
+    /* end */
+    
+    .end .content {
+        position: absolute;
+        height: 105px;
+        line-height: 105px;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page index current">
+        <hgroup>
+            <h1 class="html5">HTML5</h1>
+            <h2 class="subtitle">开发经验分享</h2>
+        </hgroup>
+    </div>
+    <div class="page thankful">
+        <div class="content">
+            <h1>这是一封感谢信</h1>
+            <ul>
+                <li>感谢大唐与学校举办的这次分享会</li>
+                <li>感谢陈珊珊同学</li>
+            </ul>
+        </div>
+    </div>
+    <div class="page author">
+        <div class="content">
+            <h1>我是孙艳慧</h1>
+            <ul>
+                <li>来自木瓜移动</li>
+                <li>高级开发工程师</li>
+                <li>10年开发经验</li>
+                <li>湖南人</li>
+            </ul>
+        </div>
+    </div>
+    <div class="page why">
+        <div class="content">
+            <h1>为什么HTML5这么火呢？？</h1>
+            <ul>
+                <li>2010年乔帮主《关于Flash的思考》</li>
+            </ul>
+        </div>
+    </div>
+    <div class="page end">
+        <div class="content">
+            谢谢！
+        </div>
+    </div>
+    <progress max="100" value="80"></progress>
+</body>
+<script src="slider.js"></script>
+<script>
+slider.init();
+</script>
+
+</html>
