@@ -3,212 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <title>html5</title>
-    <style>
-    body,
-    p,
-    h1,
-    h2 {
-        padding: 0;
-        margin: 0;
-    }
-    
-    body,
-    html {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    
-    * {
-        font-family: 'Helvetica Rounded', Arial, sans-serif;
-        font-size: 90px;
-        -webkit-box-sizing: border-box;
-    }
-    
-    body {
-        background: #ccc;
-    }
-    
-    p,
-    li {
-        font-size: 70px;
-    }
-    
-    .page {
-        background: #2E3C44;
-        border: 1px solid #2E3C44;
-        width: 100%;
-        height: 100%;
-        color: #fff;
-        opacity: 0;
-        z-index: 1;
-        position: absolute;
-    }
-    
-    .page.current {
-        opacity: 1;
-        z-index: 2;
-    }
-    
-    .page .content {
-        width: 80%;
-        height: 90%;
-        margin: 5% 10%;
-    }
-    
-    progress::-webkit-progress-value {
-        background: orange;
-    }
-    
-    progress[value] {
-        position: absolute;
-        bottom: 0;
-        z-index: 3;
-        -webkit-appearance: none;
-        width: 100%;
-        height: 10px;
-    }
-    /* index page */
-    
-    .index .html5 {
-        display: block;
-        width: 685px;
-        height: 250px;
-        margin: 15% auto 0;
-        position: relative;
-        overflow: hidden;
-        font-size: 190px;
-    }
-    
-    .index .subtitle {
-        text-align: center;
-    }
-    /* why */
-    /* end */
-    
-    .end .content {
-        position: absolute;
-        height: 105px;
-        line-height: 105px;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div class="page index current">
-        <hgroup>
-            <h1 class="html5">HTML5</h1>
-            <h2 class="subtitle">开发经验分享</h2>
-        </hgroup>
-    </div>
-    <div class="page thankful">
-        <div class="content">
-            <h1>这是一封感谢信</h1>
-            <ul>
-                <li>感谢大唐与学校举办的这次分享会</li>
-                <li>感谢陈珊珊同学</li>
-            </ul>
+    <div class="pages">
+        <div class="page index current">
+            <hgroup>
+                <h1 class="html5">HTML5</h1>
+                <h2 class="subtitle">开发经验分享</h2>
+            </hgroup>
         </div>
-    </div>
-    <div class="page author">
-        <div class="content">
-            <h1>我是孙艳慧</h1>
-            <ul>
-                <li>来自木瓜移动</li>
+        <div class="page thankful">
+            <div class="content">
+                <h1>这是一封感谢信</h1>
                 <ul>
-                    <li>CTO 犇犇</li>
+                    <li>感谢大唐公司与北京科技学校举办的这次分享会</li>
+                    <li>感谢陈珊珊同学的大力支持和推荐</li>
                 </ul>
-                <li>高级开发工程师</li>
-                <li>10年开发经验</li>
-                <li>湖南人</li>
-            </ul>
+            </div>
         </div>
-    </div>
-    <div class="page now">
-        <div class="content">
-            <h1>HTML5有多火呢？</h1>
-            <ul>
-                <li>股东也知道了</li>
-                <li>HTML5开发</li>
-            </ul>
-        </div>
-    </div>
-    <div class="page why">
-        <div class="content">
-            <h1>为什么HTML5这么火呢？？</h1>
-            <ul>
-                <li>2010年乔帮主《关于Flash的思考》</li>
-            </ul>
-        </div>
-    </div>
-    <div class="page product">
-        <div class="content">
-            <h1>有哪些HTML5的产品呢？</h1>
-            <ul>
-                <li>web端：</li>
+        <div class="page author">
+            <div class="content">
+                <h1>我是孙艳慧</h1>
                 <ul>
-                    <li>除了政府部门的网站</li>
-                    <li>北京干嘛</li>
-                    <li>小熊快跑</li>
+                    <li>湘妹子</li>
+                    <li>10年开发经验</li>
+                    <li>高级开发工程师</li>
+                    <li>
+                        木瓜移动
+                        <ul>
+                            <li>基于移动端 面向北美用户 游戏开发公司</li>
+                            <li>牛人：技术总监钱文杰（犇犇）
+                                <ul>
+                                    <li>国际coding大赛</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
-                <li>HTML5游戏：围住神经猫</li>
-            </ul>
+            </div>
         </div>
-    </div>
-    <div class="page what">
-        <div class="content">
-            <h1>什么是HTML5？</h1>
-            <ul>
-                <li>HTML5的前世今生</li>
-                <li>什么是HTML</li>
-            </ul>
-        </div>
-    </div>
-    <div class="page what html">
-        <div class="content">
-            <h1>什么是HTML</h1>
-            <ul>
-                <li>HyperText Markup Language</li>
-                <li>超文本标记语言</li>
-            </ul>
-        </div>
-    </div>
-    <div class="page html-author">
-        <div class="content">
-            <h1>HTML的作者</h1>
-            <img src="" alt="">
-            <ul>
-                <li>Tim Berners Lee</li>
+        <div class="page now">
+            <div class="content">
+                <h1>这些年H5特别火</h1>
                 <ul>
-                    <li>欧洲原核子研究中心</li>
-                    <li>物理学家</li>
-                    <li>计算机科学家</li>
+                    <li>凤凰传奇一样火</li>
+                    <li>股东都知道了</li>
+                    <li>现在有个职位：HTML5开发</li>
                 </ul>
-            </ul>
+            </div>
         </div>
-    </div>
-    <div class="page history">
-        <div class="content">
-            <ul>
-                <li>1980 Tim 信息管理系统</li>
-                <li>1989 HTML诞生</li>
-                <li>1990 Tim开发了浏览器还有相关软件</li>
-                <li>1991 Tim发布HTML1.0 Mosaic1.0</li>
-            </ul>
+        <div class="page why">
+            <div class="content">
+                <h1>为什么H5这么火呢？？</h1>
+                <ul>
+                    <li>2010年乔大帮主《关于Flash的思考》</li>
+                    <li>销售在说着自己产品H5多好，Flash多么的不好</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="page end">
-        <div class="content">
-            谢谢！
+        <div class="page product">
+            <div class="content">
+                <h1>哪些H5产品呢？</h1>
+                <ul>
+                    <li>web端：</li>
+                    <ul>
+                        <li>除了政府部门的网站</li>
+                        <li>我开发的
+                            <ul>
+                                <li>北京干嘛</li>
+                                <li>小熊快跑</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li>游戏：围住神经猫</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page what">
+            <div class="content">
+                <h1>什么是H5？</h1>
+                <ul>
+                    <li>H5的前世今生</li>
+                    <li>什么是HTML</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page what html">
+            <div class="content">
+                <h1>什么是HTML</h1>
+                <ul>
+                    <li>HyperText Markup Language</li>
+                    <li>超文本标记语言</li>
+                    <li>1989年 欧洲原核子研究中心(CERN)的Tim Berners Lee基于SGML发明</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page html-author">
+            <div class="content">
+                <h1>HTML的作者</h1>
+                <img src="images/tim.jpeg" alt="">
+                <ul>
+                    <li>Tim Berners Lee</li>
+                    <ul>
+                        <li>物理学家</li>
+                        <li>计算机科学家</li>
+                        <li>发明了HTML，HTTP</li>
+                        <li>WWW发明人</li>
+                        <li>W3C创建人</li>
+                        <li>骑士爵位</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>HTML诞生</h1>
+                <ul>
+                    <li>1980 Tim信息管理系统
+                        <ul>
+                            <li>易于编辑</li>
+                            <li>易于分享</li>
+                        </ul>
+                    </li>
+                    <li>1989 HTML诞生</li>
+                    <li>1990 Tim开发了浏览器还有相关软件</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>HTML1.0</h1>
+                <ul>
+                    <li>1991 Tim发布HTML1.0草案
+                        <ul>
+                            <li>只有18个标签</li>
+                            <li>没有img标签</li>
+                            <li>HTML初版</li>
+                            <li>Mosaic1.0兼容</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>Mosaic</h1>
+                <ul>
+                    <li>国际超级计算机应用中心(NCSA)</li>
+                    <li>对网络的发展产生很大的影响</li>
+                    <li>后来的IE也是用了它的代码</li>
+                    <li>作者：马克.安德森
+                        <ul>
+                            <li>离开NCSA后 重写了另一个红极一时的浏览器Netscape</li>
+                            <li>Nestcape后来由于Micrsoft的windows绑定IE销售 最后死了</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>W3C</h1>
+                <ul>
+                    <li>1994 Tim创立W3C
+                        <ul>
+                            <li>HTML的流行，兼容性问题</li>
+                            <li>制定了CSS，XML等一系列深远影响的标准</li>
+                            <li>推荐标准 不强制</li>
+                        </ul>
+                    </li>
+                    <li>这一年，跟Tim同在CERN的同事Håkon Wium Lie提出了CSS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>HTML2.0</h1>
+                <ul>
+                    <li>1995 HTML2.0正式版
+                        <ul>
+                            <li>Document type definition DTD 文档类型定义</li>
+                            <li>浏览器或者解析器用这种文档类型来渲染HTML页面</li>
+                            <li>看看<a href="view-source:http://www.w3.org/MarkUp/html-spec/html-spec_toc.html">页面</a></li>
+                        </ul>
+                    </li>
+                    <li>1996年 W3C发布CSS1</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>HTML3.2</h1>
+                <ul>
+                    <li>1997 HTML3.2
+                        <ul>
+                            <li>加入了font，u，address，style，script等标签</li>
+                            <li>增强了标签属性</li>
+                            <li>引入了颜色，可以给字体设置颜色了</li>
+                            <li>看看<a href="http://www.w3.org/TR/REC-html32">页面</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>HTML4</h1>
+                <ul>
+                    <li>1998 HTML4</li>
+                    <li>同年 W3C发布CSS2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>XHTML1.0</h1>
+                <ul>
+                    <li>2000, 2002 XHTML1.0
+                        <ul>
+                            <li>HTML vs XHTML vs XML</li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>WHATWG</h1>
+                <ul>
+                    <li>2004 WHATWG
+                        <ul>
+                            <li>Mozzil, Opera, Apple</li>
+                            <li>创建</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>W3C + WHATWG = HTML5</h1>
+                <ul>
+                    <li>2007 W3C介入制定HTML5标准</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>乔大帮主发文</h1>
+                <ul>
+                    <li>2010 乔大帮主发文 关于Flash的思考</li>
+                    <li>感觉很像H5的软文</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page history">
+            <div class="content">
+                <h1>HTML5</h1>
+                <ul>
+                    <li>2014 W3C发布HTML5正式版
+                        <ul>
+                            <li>包括CSS3</li>
+                            <li>HTML4 vs HTML5</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page html4-html5">
+            <div class="content">
+                <h1>HTML4 vs HTML5</h1>
+                <ul>
+                    <li>
+                        HTML4/XHTML1.0
+                        <ul>
+                            <li>HTML</li>
+                            <li>XHTML1.0: 语义化</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        HTML5
+                        <ul>
+                            <li>HTML + CSS + JS</li>
+                            <li>HTML: 语义化</li>
+                            <li>CSS: 实现动画</li>
+                            <li>JS: 缓存, 获取地理位置...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page end">
+            <div class="content">
+                <h1>历史篇完结</h1>
+            </div>
+        </div>
+        <div class="page dom">
+            <div class="content">
+                <h1>H5 之 HTML</h1>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page end">
+            <div class="content">
+                <h1>HTML篇完结</h1>
+            </div>
+        </div>
+        <div class="page css">
+            <div class="content">
+                <h1>H5 之 CSS3</h1>
+                <ul>
+                    <li>案例</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page end">
+            <div class="content">
+                <h1>CSS3篇完结</h1>
+            </div>
+        </div>
+        <div class="page css">
+            <div class="content">
+                <h1>H5 之 JS</h1>
+                <ul>
+                    <li>案例</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page end">
+            <div class="content">
+                <h1>JS篇完结</h1>
+            </div>
+        </div>
+        <div class="page end">
+            <div class="content">
+                <h1>谢谢！</h1>
+            </div>
         </div>
     </div>
     <progress max="100" value="80"></progress>
 </body>
-<script src="slider.js"></script>
+<script src="js/slider.js"></script>
 <script>
 slider.init();
 </script>
