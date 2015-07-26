@@ -21,9 +21,19 @@ var slider = {
         this.setProgressVal();
     },
     sliderToRight: function() {
+        var currentSlide = this.getCurrentSlide();
+        if (currentSlide.querySelectorAll('li.i-wanna-show').length > 0) {
+            this.showLi();
+            return;
+        }
         var slide = this.getNextSlide();
         this.setCurrentSlide(slide);
         this.setProgressVal();
+    },
+    showLi: function() {
+        var currentSlide = this.getCurrentSlide();
+        var li = currentSlide.querySelectorAll('li.i-wanna-show')[0];
+        li.classList.remove('i-wanna-show');
     },
     getPrevSlide: function() {
         var currentSlide = this.getCurrentSlide(),
