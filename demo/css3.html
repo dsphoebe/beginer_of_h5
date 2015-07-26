@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 常用属性</title>
+    <style>
+    .flower {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto 0;
+    }
+    
+    .flower * {
+        border: 1px solid #bbb;
+        position: absolute;
+        border-radius: 50%;
+        background-image: radial-gradient(yellow, white);
+    }
+    
+    span[class^='f'] {
+        width: 60px;
+        height: 25px;
+    }
+    
+    .f1 {
+        left: 100px;
+        top: 99px;
+        transform: rotate(17deg);
+    }
+    
+    .f2 {
+        left: 40px;
+        top: 86px;
+    }
+    
+    .f3 {
+        transform: rotate(45deg);
+        left: 45px;
+        top: 60px;
+    }
+    
+    .f4 {
+        transform: rotate(95deg);
+        left: 74px;
+        top: 56px;
+    }
+    
+    .f5 {
+        transform: rotate(-35deg);
+        left: 102px;
+        top: 68px;
+    }
+    
+    .f6 {
+        transform: rotate(50deg);
+        left: 82px;
+        top: 115px;
+    }
+    
+    .f7 {
+        transform: rotate(-30deg);
+        left: 48px;
+        top: 107px;
+    }
+    
+    .center {
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="flower">
+        <span class="f2"></span>
+        <span class="f3"></span>
+        <span class="f4"></span>
+        <span class="f5"></span>
+        <span class="f1"></span>
+        <span class="f6"></span>
+        <span class="f7"></span>
+        <span class="center"></span>
+    </div>
+</body>
+
+</html>
