@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Form 2.0</title>
+    <style>
+    .page {
+        width: 600px;
+        margin: 0 auto;
+    }
+    
+    input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <form action="" method="get">
+            <h1>label提高用户体验</h1>
+            <label for="name">姓名</label>
+            <input type="text" id="name">
+            <h1>datalist vs select</h1>
+            <input type="text" list="cities" placeholder="城市">
+            <datalist id="cities">
+                <option value="北京" />
+                <option value="上海" />
+                <option value="广州" />
+                <option value="深圳" />
+            </datalist>
+            <select name="" id="">
+                <option value="北京">北京</option>
+                <option value="上海">上海</option>
+                <option value="广州">广州</option>
+                <option value="深圳">深圳</option>
+            </select>
+        </form>
+    </div>
+</body>
+
+</html>

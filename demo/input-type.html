@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Form 2.0</title>
+    <style>
+    ul,
+    li,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+    }
+    
+    .page {
+        width: 600px;
+        margin: 0 auto;
+    }
+    
+    input {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <form action="" method="get">
+            <h1>旧：</h1>
+            <input type="text" placeholder="Text">
+            <input type="password" placeholder="PassWord">
+            <input type="file">
+            <hgroup>
+                <h1>HTML5新增input：</h1>
+                <h2>datetimepiker系列type；required, pattern属性</h2>
+            </hgroup>
+            <ul>
+                <li>
+                    date:
+                    <input type="date">
+                </li>
+                <li>
+                    month:
+                    <input type="month">
+                </li>
+                <li>
+                    week:
+                    <input type="week">
+                </li>
+                <li>
+                    time:
+                    <input type="time">
+                </li>
+                <li>
+                    datetime:
+                    <input type="datetime">
+                </li>
+                <li>
+                    datetime-local:
+                    <input type="datetime-local">
+                </li>
+                <li>
+                    email:
+                    <input type="email" placeholder="s@s.com">
+                </li>
+                <li>
+                    tel:
+                    <input type="tel" placeholder="Phone">
+                </li>
+                <li>
+                    url:
+                    <input type="url">
+                </li>
+                <li>
+                    search:
+                    <input type="search" results="5" placeholder="Search..." autosave="unique">
+                </li>
+                <li>
+                    number:
+                    <input type="number" step="1" placeholder="Number">
+                </li>
+                <li>
+                    range:
+                    <input type="range">
+                </li>
+                <li>
+                    <input type="submit" value="Submit">
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>
